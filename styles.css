@@ -1,0 +1,165 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f7ff;
+    color: #333;
+    transition: background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 头部样式 */
+header {
+    background-color: #4da6ff;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 主体内容样式 */
+main {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    animation: fadeIn 1s ease-in;
+    flex: 1;
+}
+
+section {
+    margin-bottom: 2em;
+    opacity: 0;
+    animation: slideIn 0.5s forwards;
+}
+
+section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+section:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+section:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+/* 底部样式 */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #4da6ff;
+    color: white;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+}
+
+/* 文章样式 */
+article {
+    background-color: #f0f9ff;
+    padding: 1em;
+    border-radius: 4px;
+    margin-bottom: 1em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+article h4 {
+    margin-top: 0;
+    color: #4da6ff;
+}
+
+time {
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* 班级人员页面样式 */
+#class-members .members-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-top: 1em;
+    padding-bottom: 15px;
+}
+
+#class-members .group-column {
+    background-color: #f0f9ff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    min-width: 150px;
+    margin-right: 20px;
+    flex: 0 0 auto;
+}
+
+#class-members .group-column h3 {
+    margin-top: 0;
+    color: #4da6ff;
+    border-bottom: 2px solid #4da6ff;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+#class-members .group-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#class-members .group-column li {
+    padding: 5px 0;
+    border-bottom: 1px dashed #ccc;
+    text-align: center;
+}
+
+#class-members .group-column li:last-child {
+    border-bottom: none;
+}
+
+/* 动画关键帧 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
